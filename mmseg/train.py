@@ -142,6 +142,9 @@ def main():
     # start training
     runner.train()
 
+    # start test
+    runner.test()
+
 
 if __name__ == "__main__":
     main()

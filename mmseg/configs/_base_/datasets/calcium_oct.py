@@ -74,4 +74,4 @@ test_dataloader = dict(
 )
 
 val_evaluator = dict(type='IoUMetric', iou_metrics=['mIoU', 'mDice'])
-test_evaluator = val_evaluator
+test_evaluator = dict(type='IoUMetric', iou_metrics=['mIoU', 'mDice'], output_dir='work_dirs/format_results')
