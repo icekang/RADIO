@@ -29,6 +29,7 @@ from mmseg.registry import RUNNERS
 # serve as a means for registering modules and setting up appropriate sys paths.
 from linear_head import *
 from radio import *
+from radio_learnable import *
 
 
 def parse_args():
@@ -113,6 +114,7 @@ def main():
     # enable automatic-mixed-precision training
     if args.amp is True:
         optim_wrapper = cfg.optim_wrapper.type
+        cfg.optim_wrapper.dtype = "float16"
         if optim_wrapper == "AmpOptimWrapper":
             print_log(
                 "AMP training is already enabled in your config.",
