@@ -72,25 +72,6 @@ param_scheduler = [
     ),
 ]
 
-# By default, models are trained on 8 GPUs with 2 images per GPU
-# train_dataloader = dict(batch_size=2)
-# val_dataloader = dict(
-#     batch_size=1,
-#     dataset=dict(
-#         pipeline=[
-#             dict(type="LoadImageFromFile"),
-#             dict(type="Resize", scale=(2048, 512), keep_ratio=True),
-#             # Pad inputs to a multiple of the patch size (14).
-#             dict(type="Pad", size_divisor=14),
-#             # add loading annotation after ``Resize`` because ground truth
-#             # does not need to do resize data transform
-#             dict(type="LoadAnnotations", reduce_zero_label=True),
-#             dict(type="PackSegInputs"),
-#         ]
-#     ),
-# )
-# test_dataloader = val_dataloader
-
 # This is needed to allow distributed training when some parameters
 # have no gradient.
 find_unused_parameters = True

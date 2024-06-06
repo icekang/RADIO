@@ -1,3 +1,6 @@
 __pycache__
 frozen_encoder_work_dirs/
 work_dirs/
+learnable_encoder_work_dirs/
+radio_linear_8xb2-80k_voc-512x512_fold0_learnable_loss_aug_encoder/
+*_work_dirs/
